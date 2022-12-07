@@ -8,7 +8,8 @@
 </head>
 <body>
   <h1>Rendered HTML Page</h1>
-  Scripting in ejs: 2 + 2 = <%= 2 + 2 %>
-  Sending value with a var: <%= text %>
+  <p>Scripting in ejs: 2 + 2 = <%= 2 + 2 %></p>
+  <p>Sending value with a var: <%= text %></p>
+  <p>Default value when variable wasn't recognized: <%= locals.textUndefined || `Default value` %></p>
 </body>
 </html>
