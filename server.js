@@ -3,8 +3,6 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-app.listen(3000);
-
 /** @params
  * path, request and result
  */
@@ -27,10 +25,8 @@ app.get('/', (req, res) => {
   res.render('index', { text: 'some text from server' });
 });
 
-app.get('/users', (req, res) => {
-  res.send('Users List');
-});
+const userRouter = require('./routes/users');
 
-app.get('/users/new', (req, res) => {
-  res.send('New User Form');
-});
+app.use('/users', userRouter);
+
+app.listen(3000);
