@@ -24,5 +24,5 @@ app.get('/', (req, res) => {
   /**
    * requires view engine, like pug or ejs
    */
-  res.render('index');
+  res.render('index', { text: 'some text from server' });
 });
