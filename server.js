@@ -26,3 +26,11 @@ app.get('/', (req, res) => {
    */
   res.render('index', { text: 'some text from server' });
 });
+
+app.get('/users', (req, res) => {
+  res.send('Users List');
+});
+
+app.get('/users/new', (req, res) => {
+  res.send('New User Form');
+});
