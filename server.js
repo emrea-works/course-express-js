@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
  * path, request and result
  */
 app.get('/', (req, res) => {
-  console.log('here');
+  // console.log('here');
   // Send status by reserved http status codes
   //res.sendStatus(500);
   // Dispatch message to viewer
