@@ -2,10 +2,11 @@ const express = require("express");
 const app = express();
 
 // putting top of the code make logger middleware works everywhere
-app.use(logger);
+//app.use(logger);
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
+// logger function can be chained in here and only works at "/" 
+app.get("/", logger, (req, res) => {
   res.render("index", { text: "some text from server" });
 });
 
