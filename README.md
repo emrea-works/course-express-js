@@ -22,3 +22,6 @@ router.get('/new', (req, res) => {
 ```
 
 In that example if we use .../new as URL router will treat it as and unique id, cos the latest endpoint listens any value as id. To be able to define /new specific routing address dynamic definition must be below of it. 
+
+## middlewares
+`next` only used in middlewares. 
