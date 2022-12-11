@@ -6,7 +6,8 @@ const app = express();
 app.set("view engine", "ejs");
 
 // logger function can be chained in here and only works at "/" 
-app.get("/", logger, (req, res) => {
+// app.get("/", logger, (req, res) => {
+app.get("/", (req, res) => {
   res.render("index", { text: "some text from server" });
 });
 
@@ -17,9 +18,9 @@ const userRouter = require("./routes/users");
 
 app.use("/users", userRouter);
 
-function logger(req, res, next) {
+/* function logger(req, res, next) {
   console.log(req.originalUrl);
   next();
-}
+} */
 
 app.listen(3001);
